@@ -33,7 +33,15 @@ public class Student {
         return grades;
     }
 
-    public void setGrades(ArrayList<Integer> grades) {
-        this.grades = grades;
+    public void addGrade(int grade) {
+        grades.add(grade);
+    }
+
+    public double getGradeAverage(){
+        int total = 0;
+        for (int grade : grades) {
+            total +=  grade;
+        }
+        return (double) total / grades.size();
     }
 }
